@@ -143,6 +143,7 @@ impl<UID: Uid> Service<UID> {
 
         // TODO(povilas): get from constructor params
         let (our_pk, our_sk) = gen_encrypt_keypair();
+        println!("Our public key:\n{:?}", our_pk);
         let service = Service {
             event_tx,
             mc: Arc::new(mc),
